@@ -509,6 +509,12 @@ export default function Home({ articles }) {
   Download CV
   <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
 </Button>
+<Button variant="secondary" className="group mt-6 w-full">
+  <a href="src/images/cv/Meelosh_Elias_Curriculum_Vitae.pdf" download="Meelosh_Elias_Curriculum_Vitae.pdf">
+    Download CV
+    <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+  </a>
+</Button>
 
       </h3>
       <div>
