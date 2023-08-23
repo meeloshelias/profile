@@ -177,7 +177,7 @@ function Contact() {
     },
     {
       method: 'LinkedIn',
-      answer: ( <a href="https://www.linkedin.com/in/eliasm2610/" target="_blank">
+      answer: ( <a href="https://www.linkedin.com/in/eliasm2610/" target="_blank" rel="noreferrer">
       Meelosh Elias
     </a>),
       logo: logoCncs,
@@ -477,6 +477,7 @@ export default function Home({ articles }) {
             <SocialLink
               href="https://www.linkedin.com/in/eliasm2610/"
               target="_blank"
+              rel="noreferrer"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />

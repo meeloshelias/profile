@@ -156,6 +156,7 @@ export default function Home({ articles }) {
             <SocialLink
               href="https://www.linkedin.com/in/eliasm2610/"
               target="_blank"
+              rel="noreferrer"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
