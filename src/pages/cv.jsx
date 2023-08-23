@@ -12,26 +12,21 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+
 import logoSchuh from '@/images/logos/schuh.png'
 import logoGap from '@/images/logos/gap.png'
 import logoRevs from '@/images/logos/revs.png'
 import graduationHat from '@/images/logos/gradhat.png'
+import skills from '@/images/logos/skills.png'
 import logoCncs from '@/images/logos/cncs.png'
 import logoNewmancollege from '@/images/logos/newmancollege.png'
 import logoUob from '@/images/logos/uob.png'
 import logoButtermere from '@/images/logos/buttermere.png'
 import logoFlorist from '@/images/logos/florist.png'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+
 import { formatDate } from '@/lib/formatDate'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
+
+
 
 function MailIcon(props) {
   return (
@@ -60,6 +55,17 @@ function GraduationHatIcon(props) {
   return (
     <Image
       src={graduationHat}
+      alt=""
+      className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+      
+    />
+  );
+}
+
+function SkillsIcon(props) {
+  return (
+    <Image
+      src={skills}
       alt=""
       className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
       
@@ -107,9 +113,7 @@ function ArrowDownIcon(props) {
 function Article({ article }) {
   return (
     <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
+      
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
@@ -164,21 +168,16 @@ function Contact() {
       logo: logoUob,
       
     },
-    {
-      method: 'Phone',
-      answer: '+447725470765',
-      logo: logoNewmancollege,
-      
-    },
+   
     {
       method: 'E-mail',
-      answer: 'meelosh200@gmail.com',
+      answer: 'eliasmeelosh2610@gmail.com',
       logo: logoCncs,
       
     },
     {
       method: 'LinkedIn',
-      answer: ( <a href="https://www.linkedin.com/in/meelosh-elias-271434262/" target="_blank" rel="noopener noreferrer">
+      answer: ( <a href="https://www.linkedin.com/in/eliasm2610/" target="_blank">
       Meelosh Elias
     </a>),
       logo: logoCncs,
@@ -189,7 +188,7 @@ function Contact() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <GraduationHatIcon className="h-6 w-6 flex-none" />
+        <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Contact Information</span>
       </h2>
       <ol className="mt-6 space-y-4">
@@ -398,7 +397,7 @@ function Skills() {
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <GraduationHatIcon className="h-6 w-6 flex-none" />
+        <SkillsIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Skills</span>
       </h2>
       <ol className="mt-6 space-y-4">
@@ -468,52 +467,32 @@ export default function Home({ articles }) {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            View My Resume
+            My Online CV
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Download for a more comprehensive version.
+            Projects coming soon...
           </p>
           <div className="mt-6 flex gap-6">
-            {/*<SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
+           
             <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-  />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />*/}
-            <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/eliasm2610/"
+              target="_blank"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
           </div>
         </div>
-      </Container>
-      {/*<Photos />*/}
-      <Container className="mt-24 md:mt-28">
+    
   <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none ">
  
-    <div className="space-y-10 lg:pl-16 xl:pl-24">
+    <div className="space-y-10 lg:pl-0 xl:pl-0">
       {/*<Newsletter />*/}
       <h3 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
         
-      <Button href="@images/cv/MeeloshElias.pdf" download="MeeloshElias.pdf" variant="secondary" className="group mt-6 w-full">
-  Download CV
-  <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-</Button>
-<Button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-  <a href="src/images/cv/Meelosh_Elias_Curriculum_Vitae.pdf" target="_blank" rel="noopener noreferrer">
-    View CV
-  </a>
-</Button>
+      
+
+
+
 
 
       </h3>
@@ -534,16 +513,4 @@ export default function Home({ articles }) {
   )
 }
 
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
 
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
-}
