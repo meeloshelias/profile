@@ -293,7 +293,7 @@ function Resumetwo() {
     },
     {
       company: 'Buttermere Capital',
-      title: 'Work Experience',
+      title: 'Financial Work Experience',
       logo: logoButtermere,
       start: '2020',
       end: '2020',
@@ -500,7 +500,7 @@ export default function Home({ articles }) {
       <div>
         <Contact />
       </div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-6">
         <Education />
         <Resumetwo />
       </div>
@@ -508,6 +508,7 @@ export default function Home({ articles }) {
         <Skills />
       </div>
     </div>
+    
   </div>
 </Container>
     </>
