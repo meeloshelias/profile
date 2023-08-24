@@ -8,6 +8,10 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/profilepicture.png'
 
+
+
+
+
 function CloseIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>

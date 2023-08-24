@@ -35,11 +35,16 @@ const modeScript = `
   }
 `
 
+
+
+
+
 export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
+        <link rel='shortcut icon' href='/favicon.png' />
         <link
           rel="alternate"
           type="application/rss+xml"
